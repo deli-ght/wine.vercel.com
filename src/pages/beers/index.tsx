@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
 import { BeerList } from "../../components";
 
-const Index: NextPage = () => {
-  const name = "index";
-  return <BeerList beername={name}></BeerList>;
+const Beers: NextPage = () => {
+  return <h1>CHOOSE YOUR FAV BEER</h1>;
 };
 
-export default Index;
+export default Beers;
