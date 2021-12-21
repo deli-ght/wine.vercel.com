@@ -7,7 +7,7 @@ interface WineProps {
 export const WineDetail = ({ winedata }: WineProps) => {
   const { id, wine, winery } = winedata;
   return (
-    <div key={`port-wine-list-${id}`}>
+    <div>
       <h1>{wine}</h1>
       <p>{winery}</p>
     </div>

@@ -15,7 +15,10 @@ export const WineList = ({ winename }: { winename: string }) => {
       <main>
         {data.map((wineData: Wine) => {
           return (
-            <WineDetail key={`wine-id-${wineData.id}`} winedata={wineData} />
+            <WineDetail
+              key={`${winename}-id-${wineData.id}`}
+              winedata={wineData}
+            />
           );
         })}
       </main>
