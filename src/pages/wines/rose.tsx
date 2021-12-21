@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
+import { WineList } from "../../components";
 
 const Rose: NextPage = () => {
-  return <div>rose</div>;
+  const name = "rose";
+  return <WineList winename={name}></WineList>;
 };
 
 export default Rose;
