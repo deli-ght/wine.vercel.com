@@ -3,7 +3,10 @@ import { useWineData } from "../hooks/useWineData";
 import { Error, Loading } from "./index";
 import { Wine } from "../types/Wine";
 
-export const WineList = ({ winename }: { winename: string }) => {
+interface WineListProps {
+  winename: string;
+}
+export const WineList = ({ winename }: WineListProps) => {
   const { data, error } = useWineData(winename);
 
   if (error) return <Error />;
