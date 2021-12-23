@@ -2,6 +2,8 @@ import { BeerDetail } from "./BeerDetail";
 import { useBeerData } from "../hooks/useBeerData";
 import { Error, Loading } from "./index";
 import { Beer } from "../types/Beer";
+import styled from "@emotion/styled";
+import { MEDIA_QUERY_END_POINT } from "../constants";
 
 interface BeerListProps {
   beername: string;
@@ -13,9 +15,9 @@ export const BeerList = ({ beername }: BeerListProps) => {
   if (!data) return <Loading />;
 
   return (
-    <div>
+    <Container>
       <h1>{beername}</h1>
-      <main>
+      <BeerCardContainer>
         {data.map((beerData: Beer) => {
           return (
             <BeerDetail
@@ -24,7 +26,24 @@ export const BeerList = ({ beername }: BeerListProps) => {
             />
           );
         })}
-      </main>
-    </div>
+      </BeerCardContainer>
+    </Container>
   );
 };
+
+const Container = styled.h1`
+  padding-left: 20px;
+  line-height: 180%;
+  border-bottom: 1px solid #eee;
+  font-family: helvetica;
+`;
+
+const BeerCardContainer = styled.main`
+  display: grid;
+  @media (min-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+`;
