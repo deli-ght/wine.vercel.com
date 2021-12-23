@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
+import type { NextPage } from "next"
 
 const Beers: NextPage = () => {
-  return <h1>CHOOSE YOUR FAV BEER</h1>;
-};
+  return <h1>CHOOSE YOUR FAV BEER</h1>
+}
 
-export default Beers;
+export default Beers
