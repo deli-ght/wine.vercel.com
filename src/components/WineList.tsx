@@ -16,7 +16,7 @@ export const WineList = ({ winename }: WineListProps) => {
 
   return (
     <main>
-      <Container>{winename}</Container>
+      <WineName>{winename}</WineName>
       <WineCardContainer>
         {data.map((wineData: Wine) => {
           return (
@@ -31,7 +31,7 @@ export const WineList = ({ winename }: WineListProps) => {
   );
 };
 
-const Container = styled.h1`
+const WineName = styled.h1`
   padding-left: 20px;
   line-height: 180%;
   border-bottom: 1px solid #eee;
