@@ -1,14 +1,14 @@
-import { keyframes } from "@emotion/react";
-import styled from "@emotion/styled";
-import { Beer } from "../types/Beer";
+import { keyframes } from "@emotion/react"
+import styled from "@emotion/styled"
+import { Beer } from "../types/Beer"
 // import Image from "next/image";
 
 interface BeerProps {
-  beerdata: Beer;
+  beerdata: Beer
 }
 
 export const BeerDetail = ({ beerdata }: BeerProps) => {
-  const { id, name, image, rating } = beerdata;
+  const { id, name, image, rating } = beerdata
   return (
     <Container>
       <h1>{name}</h1>
@@ -18,8 +18,8 @@ export const BeerDetail = ({ beerdata }: BeerProps) => {
       </Reviews>
       {/* <Image src={image} alt={`${name}`} width={300} height={300} /> */}
     </Container>
-  );
-};
+  )
+}
 
 const wave = keyframes`
   from {
@@ -31,7 +31,7 @@ const wave = keyframes`
   to {
     transform : translateY(200px) rotate(0);
   }
-`;
+`
 const Container = styled.div`
   display: flex;
   position: relative;
@@ -69,7 +69,7 @@ const Container = styled.div`
     animation: ${wave} 10s infinite;
     z-index: -1;
   }
-`;
+`
 
 const Reviews = styled.div`
   position: absolute;
@@ -78,7 +78,7 @@ const Reviews = styled.div`
   &::after {
     border-right: 1px solid black;
   }
-`;
+`
 const Review = styled.p`
   position: relative;
   padding: 10px;
@@ -87,4 +87,4 @@ const Review = styled.p`
   font-weight: 300;
   line-height: 20px;
   text-align: right;
-`;
+`
