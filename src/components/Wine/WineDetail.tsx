@@ -37,5 +37,5 @@ const Review = styled.span`
 `
 
 const WineImg = styled.img`
-  height: 300px;
+  width: 50%;
 `
