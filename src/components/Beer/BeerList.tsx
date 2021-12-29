@@ -1,9 +1,9 @@
 import { BeerDetail } from "./BeerDetail"
-import { useBeerData } from "../hooks/useBeerData"
-import { Error, Loading } from "./index"
-import { Beer } from "../types/Beer"
+import { useBeerData } from "../../hooks/useBeerData"
+import { Error, Loading } from "../index"
+import { Beer } from "../../types/Beer"
 import styled from "@emotion/styled"
-import { MEDIA_QUERY_END_POINT } from "../constants"
+import { MEDIA_QUERY_END_POINT } from "../../constants"
 
 interface BeerListProps {
   beername: string

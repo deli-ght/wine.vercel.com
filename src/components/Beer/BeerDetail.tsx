@@ -1,6 +1,6 @@
 import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
-import { Beer } from "../types/Beer"
+import { Beer } from "../../types/Beer"
 // import Image from "next/image";
 
 interface BeerProps {
